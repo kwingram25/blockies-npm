@@ -101,7 +101,10 @@ module.exports = (function() {
     var imageData = createImageData(size);
     var canvas = createCanvas(imageData, color, scale, bgcolor, spotcolor);
 
-    return canvas;
+    return {
+      icon: canvas,
+      colors: [color, bgColor, spotcolor]
+    };
   }
 
   return createIcon;
